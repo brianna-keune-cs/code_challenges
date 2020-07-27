@@ -54,14 +54,18 @@ class Solution:
             list_nodes.append(new_node)
 
         list_nodes.reverse()
+        
         head = list_nodes[0]
 
-        for i in range(0, len(list_nodes)-1):
-            node = list_nodes[i]
-            next_node = list_nodes[i + 1]
-            node.next = next_node
+        self.create_linked_list(list_nodes)
 
         return head
+
+    def create_linked_list(self, arr):
+        for i in range(0, len(arr)-1):
+            node = arr[i]
+            next_node = arr[i + 1]
+            node.next = next_node
 
     def ll_to_array(self, head):
         result = []
