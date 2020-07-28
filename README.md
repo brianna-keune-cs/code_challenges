@@ -1,8 +1,8 @@
 # Leet Code Challenges
 
-    This is my collection of accepted Leet code challenges for submission to Lambda School CS Unit 2 build week.
-    These links will take you to the code challenges if you want to try them yourself.
-    To check out my accepted answers, just go to the file that matches the code challenge name.
+This is my collection of accepted Leet code challenges for submission to Lambda School CS Unit 2 build week.
+These links will take you to the code challenges if you want to try them yourself.
+To check out my accepted answers, just go to the file that matches the code challenge name.
     
 
 ## Day 1 MVP

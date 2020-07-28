@@ -15,6 +15,7 @@ return [0, 1].
 
 class Solution:
     def twoSum(self, nums, target):
+        # brute force
         # nested loops, will probably time out.
         # for j in range(0, len(nums) - 1):
         #     for k in range(0, len(nums) - 1):
@@ -32,6 +33,7 @@ class Solution:
         # when target is found, return those indexes
 
         # ~~~~~~~~~~~ WORKING ~~~~~~~~~~~~~~~~~
+        # naive?
         # cache = {}
         # location = []
 
@@ -64,13 +66,24 @@ class Solution:
         #             return [index1, index2]
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+        # second pass
+        # runtime: O(n)
+        # space: O(n)
         cache = {}
+
+        # create cache of num at index
+        # num is in target (complement of target)
         for index, num in enumerate(nums):
             cache[num] = index
         
+        # loop through nums list
         for i in range(len(nums)):
+            # compare value at index in nums to complement of target
             complement = target - nums[i]
+            # if complement is in cache
+            # and that complement is not at the same index (so we do not use the same element twice)
             if complement in cache and cache[complement] != i:
+                # return location indexes
                 return [cache[complement], i]
 
 
