@@ -6,7 +6,7 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 Example:
 
 Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
-Output: 7 -> 0 -> 8
+Output: 7 -> 0 -> 8F
 Explanation: 342 + 465 = 807.
 
 '''
@@ -83,7 +83,7 @@ class Solution:
         for i in range(0, len(arr)):
             digits_place = 10 ** i
             num = arr[i]
-            if i is 0:
+            if i == 0:
                 sum += num
             else:
                 sum += num * digits_place
